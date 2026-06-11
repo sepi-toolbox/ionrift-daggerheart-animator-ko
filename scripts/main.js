@@ -5,9 +5,9 @@ import { AnimatorDiagnostics } from "./Diagnostics.js";
 Hooks.once('init', () => {
     // Support Link
     game.settings.registerMenu("ionrift-daggerheart-animator", "supportLink", {
-        name: "Get Support",
-        label: "Join Discord",
-        hint: "Bug reports, questions, and feature requests.",
+        name: "지원 받기",
+        label: "Discord 참여",
+        hint: "버그 신고, 질문, 기능 요청.",
         icon: "fab fa-discord",
         type: class extends FormApplication {
             render() { window.open("https://discord.gg/vFGXf7Fncj", "_blank"); return this; }
@@ -24,7 +24,7 @@ Hooks.once('ready', async function () {
     if (aa?.active) {
         console.log(`Ionrift Animations | Readiness Check: Automated Animations v${aa.version} ACTIVE ✅`);
     } else {
-        ui.notifications.error("Ionrift Animations requires 'Automated Animations' module!");
+        ui.notifications.error("Ionrift Animations에는 'Automated Animations' 모듈이 필요합니다!");
         console.error("Ionrift Animations | Readiness Check: Automated Animations MISSING or INACTIVE ❌");
     }
 });
